@@ -64,6 +64,7 @@ class UserTest < ActiveSupport::TestCase
     assert_not @user.valid?
   end
   
+  #comment out the before_save line to get to red, then uncomment it to get to green. on User model
   test "email addresses should be saved as lower-case" do
     mixed_case_email = "Foo@ExAMPle.CoM"
     @user.email = mixed_case_email
